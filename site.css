@@ -17,43 +17,46 @@ body {
   width: 100%;
   color: rgba(255, 255, 255, .75);
   background-color: #333;
-  ;
+  display: flex;
+  flex-direction: column;
   font-family: 'Anonymous Pro', monospace;
-}
-
-h2 {
-  position: relative;
-  width: 8em;
-  margin: 0 auto;
-  border-right: 2px solid rgba(255, 255, 255, .75);
-  font-size: 180%;
-  text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  transform: translateY(-50%);
+  align-items: center;
 }
 
 /* Animation */
 
-.anim-typewriter {
-  animation: typewriter 4s steps(14) 1s 1 normal both, blinkTextCursor 500ms steps(14) infinite normal;
+
+.typewriter {
+  display: inline-block;
 }
 
-@keyframes typewriter {
-  from {
-    width: 0;
+.typewriter-text {
+  display: inline-block;
+  overflow: hidden;
+  letter-spacing: 2px;
+  animation: typing 5s steps(14, end), blink .75s step-end infinite;
+  white-space: nowrap;
+  font-size: 30px;
+  font-weight: 700;
+  border-right: 4px solid orange;
+  box-sizing: border-box;
+}
+
+@keyframes typing {
+  from { 
+      width: 0% 
   }
-  to {
-    width: 8em;
+  to { 
+      width: 100% 
   }
 }
 
-@keyframes blinkTextCursor {
-  from {
-    border-right-color: rgba(255, 255, 255, .75);
+@keyframes blink {
+  from, to { 
+      border-color: transparent 
   }
-  to {
-    border-right-color: transparent;
+  50% { 
+      border-color: orange; 
   }
 }
 
