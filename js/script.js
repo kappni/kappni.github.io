@@ -16,7 +16,7 @@ new fullpage('#fullpage', {
     navigation: true,
     navigationPosition: 'right',
     controlArrows: false,
-    anchors: ['firstSection', 'secondSection', 'thirdSection' ],
+    anchors: ['home', 'about', 'skills' ],
     menu: '#menu',
     licenseKey: '07DE8664-ECAB41E7-B9CBCF6F-62A507F6',
     verticalCentered: true,
