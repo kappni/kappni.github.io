@@ -27,11 +27,27 @@ body {
     width: 100%;
     font-size: $font-size-default;
 }
+h1{
+    font-size: 3em;
+}
+
+h2{
+    font-size: 2.4em;
+}
+
+h3{
+    font-size: 1.8em;
+}
 
 @media only screen and (max-width: 860px) {
     body{
         font-size: $font-size-default-mobile;
-        padding: 50px;
+    }
+
+    header{
+        & > *{
+            margin:2em;
+        }
     }
     
 }
