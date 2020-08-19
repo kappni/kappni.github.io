@@ -48,6 +48,12 @@ header {
     }
 }
 
+footer {
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+}
+
 h1, h2, h3 {
     margin: 0.2em 0;
 }

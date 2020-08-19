@@ -20,7 +20,7 @@ new fullpage('#fullpage', {
     menu: '#menu',
     licenseKey: '07DE8664-ECAB41E7-B9CBCF6F-62A507F6',
     verticalCentered: false,
-    fixedElements: 'header',
+    fixedElements: 'header, footer',
     //paddingTop: '120px',
     afterLoad: function(anchorLink, index) {
       //$header_top.css('background', 'rgba(0, 47, 77, .3)');
