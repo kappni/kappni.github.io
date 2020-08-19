@@ -19,11 +19,13 @@ new fullpage('#fullpage', {
     anchors: ['firstSection', 'secondSection', 'thirdSection' ],
     menu: '#menu',
     licenseKey: '07DE8664-ECAB41E7-B9CBCF6F-62A507F6',
-    verticalCentered: false,
+    verticalCentered: true,
     fixedElements: 'header, footer',
     paddingTop: '70px',
     paddingBottom: '70px',
     scrollOverflow: true,
+    autoScrolling: true,
+    //scrollBar: false,
     afterLoad: function(anchorLink, index) {
       //$header_top.css('background', 'rgba(0, 47, 77, .3)');
       //$nav.css('background', 'rgba(0, 47, 77, .25)');
