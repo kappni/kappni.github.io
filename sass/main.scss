@@ -28,6 +28,12 @@ body {
     font-size: $font-size-default;
 }
 
+@media only screen and (max-width: 860px) {
+    body{
+        font-size: $font-size-default-mobile;
+    }
+}
+
 body {
     color: $main-color;
     display: flex;
