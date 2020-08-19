@@ -16,82 +16,45 @@ html {
 body {
   min-height: 100%;
   width: 100%;
-  color: rgba(255, 255, 255, .75);
-  background-color: #131515;
+  color: #ececec;
   display: flex;
   flex-direction: column;
-  font-family: 'Anonymous Pro', monospace;
   align-items: center;
   position: relative;
 }
 
+header {
+  position: fixed;
+}
+
+section {
+  position: relative;
+}
+
+h1 {
+  font-size: 64px;
+  margin: 0;
+}
+
 h2 {
   margin: .5em 0em;
+  font-size: 48px;
+}
+
+h3 {
   font-size: 32px;
+  margin: 0;
 }
 
 p {
   font-size: 18px;
 }
 
-header {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  width: 100%;
-}
-
-header>nav {
-  position: fixed;
-  width: 100%;
-  float: left;
-  z-index: 5;
-  background-color:#131515;
-  border-bottom: 1px solid white;
-}
-
-header>nav>* {
-  margin-top: 1.5em;
-  margin-left: 1em;
-  float: left;
-}
-
-header>nav>*:nth-child(1) {
-  margin-left: 2em;
-}
-
-header>nav>.logo, header>nav>.logo>img {
-  width: 40px;
-}
-
-main {
-  width: calc(100% - 4em);
-  margin: 2em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-section {
-  display: flex;
-  flex-direction: row;
-  margin-top: 3em;
-}
-
-section>img {
-  float: left;
-  filter: blur(0.2em);
-  max-height: 300px;
-}
-
-section>.text {
-  padding: 1em;
-  float: left;
-  background-color: white;
-  color: #131515;
-  max-width: 600px;
+.home .text {
+  margin-left: 4em;
+  /* position: absolute;
+  bottom: 4em;
+  left: 4em; */
 }
 
 footer {
@@ -124,7 +87,7 @@ footer {
   font-size: 130%;
   background-color: transparent;
   border: 3px solid #7de2d1;
-  color: white;
+  color: #ececec;
   padding: .1em .8em;
   border-radius: .3em;
   cursor: pointer;
@@ -176,7 +139,6 @@ footer {
   letter-spacing: 2px;
   animation: typing 5s steps(14, end), blink .75s step-end infinite;
   white-space: nowrap;
-  font-size: 30px;
   font-weight: 700;
   border-right: 4px solid #7de2d1;
   box-sizing: border-box;
@@ -253,90 +215,57 @@ footer {
   }
 }
 
-.circular {
-  display: block;
-  position: relative;
-  width: 200px;
-  height: 200px;
-  overflow: hidden;
-  border: 2px solid white;
-  border-radius: 50%;
-  margin: 0 auto;
-  margin-top: 7em;
-  margin-bottom: 2em;
+.fade-in {
+  animation: fadeIn normal forwards ease-in-out 5s;
 }
-
-.circular img {
-  width: 100%;
-  height: 100%;
-  margin-left: -10px;
-  margin-top: 5px;
-}
-
-.background {
-  z-index: -1;
-  position: fixed;
-  width: 90vw;
-  height: 100%;
-}
-
-.background>.line {
-  position: absolute;
-  width: 1px;
-  height: 100%;
-  top: 0;
-  left: 50%;
-  overflow: hidden;
-}
-
-.background>.line::after {
-  content: '';
-  display: block;
-  position: absolute;
-  height: 15vh;
-  width: 100%;
-  top: -50%;
-  left: 0;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
-  animation: run 7s 0s infinite;
-  animation-fill-mode: forwards;
-  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
-}
-
-.background>.line:nth-child(1) {
-  margin-left: -40%
-}
-
-.background>.line:nth-child(2)::after {
-  animation-delay: 2s
-}
-
-.background>.line:nth-child(3) {
-  margin-left: 40%
-}
-
-.background>.line:nth-child(3)::after {
-  animation-delay: 2.5s
-}
-
-@keyframes run {
+@keyframes fadeIn {
   0% {
-    top: -50%;
+    opacity:0;
   }
   100% {
-    top: 110%;
+    opacity:1;
   }
 }
 
-.background>.box {
-  margin: 1em;
-  filter: blur(6em);
-  width: calc(10% - 2em);
-  height: calc(10% - 2em);
-  position: relative;
-  float: left;
+
+
+.home img {
+  width: 30%;
+  position: absolute;
+  right: 4em;
+  bottom: 0;
+}
+
+.home h2 {
+	transform: translateY(-1000px);
+	opacity: 0;
+	transition: transform .8s cubic-bezier(0.16, 0.68, 0.43, 0.99),
+				opacity .8s ease-in-out;
+}
+
+.home.active h2 {
+	transform: translateY(0);
+	opacity: 1;
 }
 
 .highlight {
-  color: #7de2d1;
+  color: #f2a365;
+}
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+  z-index: -1;;
+  background: linear-gradient(314deg, #222831, #30475e);
+  background-size: 400% 400%;
+
+  animation: move-bg 19s ease infinite;
+}
+
+@keyframes move-bg {
+  0%{background-position:0% 2%}
+  50%{background-position:100% 99%}
+  100%{background-position:0% 2%}
 }

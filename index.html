@@ -2,35 +2,61 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
     <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
-    <link rel="stylesheet" type="text/css" href="site.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <title>Nico Kappeler | Software Engineer</title>
 </head>
 
 <body>
     <header>
-        <nav>
-            <a class="logo" href="/"><img src="logo.png" alt="logo" /></a>
-            <a class="btn btn-discrete highlight" href="/">1. Home.</a>
-            <a class="btn btn-discrete highlight" href="#main">2. About.</a>
-        </nav>
-        <div class="circular">
-            <img class="rounded" src="kappeler.png" alt="Nico kappeler">
+        <div class="header-top clearfix">
+            <a href="#firstSection"><img src="logo.png" alt="logo" /></a>
         </div>
-        <h3>Hello, nice to meet you. I am</h3>
-        <div class="typewriter">
-            <h1 class="typewriter-text">Nico Kappeler.
+        <div id="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-        <h3>
-            I am a Software Engineer based in Zürich.
-        </h3>
+        <ul class="toggle-menu">
+            <li data-menuanchor="firstSection">
+                <a href="#firstSection" title="First Section">First Section</a>
+            </li>
+            <li data-menuanchor="secondSection">
+                <a href="#secondSection" title="Second Section">Second Section</a>
+            </li>
+            <li data-menuanchor="thirdSection">
+                <a href="#thirdSection" title="Third Section">Third Section</a>
+            </li>
+        </ul>
+    </header>
+    <!-- <header>
         <span class="space-5"></span>
         <a class="btn" href="mailto:nico.kappeler@bluewin.ch"><i class="material-icons md-18">mail</i>Contact me</a>
         <a class="btn btn-discrete btn-notext bottom" href="#main"><i
                 class="material-icons md-18">arrow_circle_down</i></a>
-    </header>
-    <main id="main">
+    </header> -->
+    <div id="fullpage">
+        <section class="home">
+            <!-- <img class="fade-in" src="kappeler.png" alt="Nico kappeler"> -->
+            <div class="text">
+                <h3>Hello, nice to meet you. I'm</h3>
+                <div class="typewriter">
+                    <h1 class="typewriter-text">Nico Kappeler,
+                </div>
+                <h3>
+                    a <span class="highlight">Software Engineer</span> based in Zürich.
+                </h3>
+            </div>
+        </section>
+
         <section class="right">
-            <img src="java.jpg" alt="coding" />
             <div class="text">
                 <h2>
                     About me.
@@ -41,7 +67,6 @@
                     in Brugg-Windisch and working at ABB.</p>
             </div>
         </section>
-        <span class="space-5"></span>
         <section class="right">
             <div class="text">
                 <h2>
@@ -52,19 +77,23 @@
                     I'm currently studying part-time at the The University of Applied Sciences Northwestern Switzerland
                     in Brugg-Windisch and working at ABB.</p>
             </div>
-            <img src="java.jpg" alt="coding" />
+            <footer>
+                Nico Kappeler <span class="highlight">© 2020</span>
+            </footer>
         </section>
-    </main>
-    <footer>
-        Nico Kappeler <span class="highlight">© 2020</span>
-    </footer>
+    </div>
     <div class="background">
         <div class="line"></div>
         <div class="line"></div>
         <div class="line"></div>
     </div>
 
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
 
+    <!-- This following line is only necessary in the case of using the option `scrollOverflow:true` -->
+    <script type="text/javascript" src="node_modules/fullpage.js/vendors/scrolloverflow.min.js"></script>
+    <script type="text/javascript" src="node_modules/fullpage.js/dist/fullpage.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
 </body>
 
 </html>
