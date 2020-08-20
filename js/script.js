@@ -1,6 +1,7 @@
 var $header_top = $('header');
 var $nav = $('nav');
 
+
 // toggle menu 
 $header_top.find('#hamburger-icon').on('click', function() {
     $(this).parent().toggleClass('open-menu');
@@ -22,21 +23,15 @@ new fullpage('#fullpage', {
     verticalCentered: true,
     fixedElements: 'header, footer',
     paddingTop: '70px',
-    paddingBottom: '70px',
+    paddingBottom: '60px',
     scrollOverflow: true,
     autoScrolling: true,
     //scrollBar: false,
     afterLoad: function(anchorLink, index) {
-      //$header_top.css('background', 'rgba(0, 47, 77, .3)');
-      //$nav.css('background', 'rgba(0, 47, 77, .25)');
-      // if (index == 5) {
-      //     $('#fp-nav').hide();
-      //   }
+      $(index.item).find("h2").toggleClass("active");
     },
   
     onLeave: function(index, nextIndex, direction) {
-      // if(index == 5) {
-      //   $('#fp-nav').show();
-      // }
+      $(index.item).find("h2").toggleClass("active");
     }, 
   }); 

@@ -3,8 +3,6 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
 
     <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
@@ -14,7 +12,23 @@
 <body>
     <header>
         <div class="header-top clearfix">
-            <a href="#firstSection"><img src="img/logo.png" alt="logo" /></a>
+            <a href="#firstSection"><svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <title>Logo</title>
+                
+                <linearGradient id="blue-fill" x1="0.5" y1="0" x2="0.5" y2="1">
+                      <stop offset="100%" stop-opacity="1" stop-color="#f2a365">
+                        <animate attributeName="offset" values="0;1" repeatCount="1" dur="1s" begin="0s"/>
+                      </stop>
+                      <stop offset="100%" stop-opacity="0" stop-color="#f2a365">
+                        <animate attributeName="offset" values="0;1" repeatCount="1" dur="3s"  begin="0s"/>
+                      </stop>
+                      
+                  </linearGradient>
+                
+                <g id="Logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <path d="M30.3609299,34.5756667 L41.144,54.856 L32,64 L26.384,58.384 L26.3849299,38.5516667 L30.3609299,34.5756667 Z M48.468,16.468 L64,32 L50.756,45.244 L39.9729299,24.9636667 L48.468,16.468 Z M11.384,20.616 L11.384,43.384 L7.10542736e-14,32 L11.384,20.616 Z M32,0 L39.276,7.276 L26.3849299,20.1676667 L26.384,5.616 L32,0 Z" id="Combined-Shape" fill="url(#blue-fill)"></path>
+                </g>
+            </svg></a>
         </div>
         <div id="hamburger-icon">
             <span></span>
@@ -34,15 +48,9 @@
             <p data-menuanchor="skills">
                 <a href="#skills" title="Skills">Skills</a>
             </p>
-            <a class="button" href="docs/KappelerCV.pdf" target="_blank" title="CV">Download CV</a>
+            <a class="button withBg" href="docs/KappelerCV.pdf" target="_blank" title="CV">Download CV</a>
         </div>
     </header>
-    <!-- <header>
-        <span class="space-5"></span>
-        <a class="btn" href="mailto:nico.kappeler@bluewin.ch"><i class="material-icons md-18">mail</i>Contact me</a>
-        <a class="btn btn-discrete btn-notext bottom" href="#main"><i
-                class="material-icons md-18">arrow_circle_down</i></a>
-    </header> -->
     <div id="fullpage">
         <section class="home">
             <!-- <img class="fade-in" src="kappeler.png" alt="Nico kappeler"> -->
@@ -73,40 +81,49 @@
                 </div>
             </div>
         </section>
-        <section class="right">
+        <section class="skills">
+            <div class="skills">
+                <div class="flex-break"><h2>
+                    Technical Skills.
+                </h2></div>
+                <div class="skill-section"><h3>Languages</h3><ul><li>C#</li><li>Java</li><li>Node.js</li><li>Python</li></ul></div>
+                <div class="skill-section"><h3>Web Development</h3><ul><li>HTML</li><li>CSS</li><li>Javascript</li><li>ASP.NET Core</li><li>ASP.NET Framework</li></ul></div>
+                <div class="skill-section"><h3>Software</h3><ul><li>Docker</li><li>git</li><li>Windows, Mac & Linux</li></ul></div>
+                <div class="skill-section"><h3>Data</h3><ul><li>SQL (MSSQL, MySQL, PostgreSQL)</li><li>Entity Framework</li></ul></div>
+                <div class="skill-section"><h3>Design Patterns</h3><ul><li>MVVM</li><li>MVC</li></ul></div>
+            </div>
+        </section>
+        <section class="contact">
             <div class="text">
                 <h2>
-                    Skills.
+                    Contact me.
                 </h2>
-                <p>Grüezi, I'm Nico, a passionate Software Engineer, who has been writing code for 6 years. In this
-                    time I've built websites, corporate applications and even small games. <br>
-                    I'm currently studying part-time at the FHNW University in Brugg-Windisch and working at ABB.</p>
+                <p>Do you have any questions, or would you like to chat? Don't hesitate to contact me.
+                </p>
+                <a class="button" href="mailto:nico.kappeler@bluewin.ch" target="_blank" title="Mail">Say something!</a>
             </div>
-            <footer>
-                <svg xmlns="http://www.w3.org/2000/svg" class="socialMedia" width="32" height="32" viewBox="0 0 24 24">
-                    <path
-                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
-                        fill="white" /></svg>
-                <svg width="32" height="32" viewBox="0 0 1024 1024" class="socialMedia" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"
-                        transform="scale(64)" fill="white" />
-                </svg>
-
-                Nico Kappeler <span class="highlight">© 2020</span>
-            </footer>
         </section>
     </div>
+    <footer>
+        <svg xmlns="http://www.w3.org/2000/svg" class="socialMedia" width="32" height="32" viewBox="0 0 24 24">
+            <path
+                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                fill="white" /></svg>
+        <svg width="32" height="32" viewBox="0 0 1024 1024" class="socialMedia" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"
+                transform="scale(64)" fill="white" />
+        </svg>
+
+        Nico Kappeler <span class="highlight">© 2020</span>
+    </footer>
     <div class="background">
         <div class="line"></div>
         <div class="line"></div>
         <div class="line"></div>
     </div>
-
     <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
-
-    <!-- This following line is only necessary in the case of using the option `scrollOverflow:true` -->
     <script type="text/javascript" src="node_modules/fullpage.js/vendors/scrolloverflow.min.js"></script>
     <script type="text/javascript" src="node_modules/fullpage.js/dist/fullpage.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
