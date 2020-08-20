@@ -86,9 +86,16 @@ header {
 }
 
 footer {
+    padding: 0 2em;
     position: fixed;
     bottom: 0;
     z-index: 10;
+    width: calc(100% - 4em);
+
+    a{
+        margin-right: .5em;
+        float: right;
+    }
 }
 
 h1,
@@ -359,7 +366,7 @@ section {
         border: 5px $main-color solid;
         //box-shadow: -2px -2px 0px 3px $main-color;
         border-radius: 5px;
-        max-width: 450px;
+        max-width: 400px;
         ul{
             padding: .5em;
             list-style: none;
@@ -385,8 +392,18 @@ section {
 
 .contact{
     .text{
-        *{
+        & > *{
             margin-bottom: 1.2em;
+        }
+        a {
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 0.5em;
+            margin-bottom: 0px;
+            margin-right: .5em;
+            svg{
+                margin-bottom: 0;
+            }
         }
     }
 }
