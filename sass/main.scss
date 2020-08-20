@@ -10,7 +10,6 @@ $font-size-default-mobile: 18px;
 @import url("../node_modules/fullpage.js/dist/fullpage.min.css");
 @import url("https://fonts.googleapis.com/css?family=Anonymous+Pro");
 @import url("https://fonts.googleapis.com/css?family=Roboto");
-@import "phone";
 
 * {
     padding: 0;
@@ -440,3 +439,5 @@ section {
         background-position: 100% 99%;
     }
 }
+
+@import "phone";
