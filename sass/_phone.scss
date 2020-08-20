@@ -26,6 +26,12 @@
         background-color: $highlight-color;
     }
 
+    #hamburger-icon.open{
+        span{
+            background-color: $main-color;
+        }
+    }
+
     section{
         padding: 1.5em;
     }
