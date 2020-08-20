@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Logo</title>
+    
+    <linearGradient id="blue-fill" x1="0.5" y1="0" x2="0.5" y2="1">
+          <stop offset="100%" stop-opacity="1" stop-color="#f2a365">
+            <animate attributeName="offset" values="0;1" repeatCount="1" dur="3s" begin="0s"/>
+          </stop>
+          <stop offset="100%" stop-opacity="0" stop-color="#f2a365">
+            <animate attributeName="offset" values="0;1" repeatCount="1" dur="3s"  begin="0s"/>
+          </stop>
+          
+      </linearGradient>
+    
+    <g id="Logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M30.3609299,34.5756667 L41.144,54.856 L32,64 L26.384,58.384 L26.3849299,38.5516667 L30.3609299,34.5756667 Z M48.468,16.468 L64,32 L50.756,45.244 L39.9729299,24.9636667 L48.468,16.468 Z M11.384,20.616 L11.384,43.384 L7.10542736e-14,32 L11.384,20.616 Z M32,0 L39.276,7.276 L26.3849299,20.1676667 L26.384,5.616 L32,0 Z" id="Combined-Shape" fill="url(#blue-fill)"></path>
+    </g>
+</svg>
