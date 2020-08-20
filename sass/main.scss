@@ -27,29 +27,28 @@ body {
     width: 100%;
     font-size: $font-size-default;
 }
-h1{
+h1 {
     font-size: 3em;
 }
 
-h2{
+h2 {
     font-size: 2.4em;
 }
 
-h3{
+h3 {
     font-size: 1.8em;
 }
 
 @media only screen and (max-width: 860px) {
-    body{
+    body {
         font-size: $font-size-default-mobile;
     }
 
-    header{
-        & > *{
-            margin:2em;
+    header {
+        & > * {
+            margin: 2em;
         }
     }
-    
 }
 
 body {
@@ -89,8 +88,12 @@ h3 {
     margin: 0.2em 0;
 }
 
-a{
+a {
     color: $main-color;
+
+    &:hover{
+        color: $highlight-color;
+    }
 }
 
 section {
@@ -150,12 +153,13 @@ section {
     top: 0px;
     right: 0px;
     padding: 0em;
-    transition:max-height .3s linear, padding .3s linear;
+    transition: max-height 0.3s linear, padding 0.3s linear;
     //transition:flex 2s ease-out;
-    background-color: rgba(242, 163, 101, 0.3);
+    background-color: rgba(242, 163, 101, 0.5);
 
-    p{
+    p {
         text-align: right;
+        margin-top: 0.5em;
     }
 }
 
@@ -241,23 +245,81 @@ section {
     background: $main-color;
 }
 
-.button{
+.button {
     display: block;
-    padding: .5em;
+    padding: 0.5em;
     background-color: transparent;
     border: 1px $main-color solid;
     border-radius: 5px;
     color: $main-color;
     text-decoration: none;
-    transition: background-color .3s ease-out, color .3s ease-out, border-color .3s ease-out;
-    &:hover{
-        background-color:$bg-2-color;
+    margin-top: 0.5em;
+    transition: background-color 0.3s ease-out, color 0.3s ease-out, border-color 0.3s ease-out;
+    &:hover {
+        background-color: $bg-2-color;
         border-color: $highlight-color;
         color: $highlight-color;
     }
 }
 
+.socialMedia {
+    transition: transform .3s ease;
+    paint-order: stroke;
+    path {
+        fill: $main-color;
+        stroke: $main-color;
+        stroke-width: 0;
+        transition: fill 0.3s ease, stroke 0.3s ease, stroke-width 0.3s ease;
+    }
+}
 
+.socialMedia:hover {
+    transform: scale(1.1);
+    path {
+        fill: $highlight-color;
+        stroke: $highlight-color;
+        stroke-width: 0;
+    }
+}
+
+.about {
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        .text{
+            flex: 1 1 450px;
+            min-width: 450px;
+            max-width: 700px;
+        }
+
+        &>*{
+            margin: 2em;
+        }
+    }
+
+    .img {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+        margin-left: 2em;
+        margin-right: 2em;
+        flex: 0 0 200px;
+        border: 2px $main-color solid;
+        float: left;
+        display: block;
+        overflow: hidden;
+        position: relative;
+        border-radius: 100%;
+
+        img{
+            position: absolute;
+            margin-left: 0%;
+            width: 100%;
+        }
+    }
+}
 
 @keyframes typing {
     from {
