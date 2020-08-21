@@ -174,8 +174,8 @@ section {
     transition: max-height 0.3s linear, padding 0.3s linear;
     //transition:flex 2s ease-out;
     background-color: $highlight-color;
-    a:hover{
-        color: $bg-1-color;
+    a:hover:not(.button){
+        color: $bg-2-color;
     }
 
     p {
@@ -281,7 +281,7 @@ section {
     margin-top: 0.5em;
     transition: background-color 0.3s ease-out, color 0.3s ease-out, border-color 0.3s ease-out;
     text-align: center;
-    box-shadow: 2px 2px;
+    box-shadow: 2px 2px $main-color;
     &:hover {
         border-color: $highlight-color;
         color: $highlight-color;
