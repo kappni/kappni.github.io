@@ -173,7 +173,7 @@ section {
     padding: 0em;
     transition: max-height 0.3s linear, padding 0.3s linear;
     //transition:flex 2s ease-out;
-    background-color: rgba(242, 163, 101, 0.5);
+    background-color: $highlight-color;
 
     p {
         text-align: left;
@@ -196,10 +196,10 @@ section {
         position: absolute;
         height: 9px;
         width: 50%;
-        background: $highlight-color;
+        background-color: $highlight-color;
         opacity: 1;
         transform: rotate(0deg);
-        transition: 0.25s ease-in-out;
+        transition: 0.4s ease-in-out, background-color .5s linear;
 
         &:nth-child(even) {
             left: 50%;
@@ -224,6 +224,9 @@ section {
         }
     }
     &.open {
+        span{
+            background-color: $main-color;
+        }
         span:nth-child(1),
         span:nth-child(6) {
             transform: rotate(45deg);
