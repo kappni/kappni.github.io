@@ -1,11 +1,11 @@
-var $header_top = $('header');
-var $nav = $('nav');
+var $header_top = document.getElementsByName("header")[0];
+var $nav = document.getElementsByName("nav")[0];
 
 
 // toggle menu 
-$header_top.find('#hamburger-icon').on('click', function() {
-    $(this).parent().toggleClass('open-menu');
-    $(this).toggleClass('open');
+document.getElementById('hamburger-icon').addEventListener('click', function() {
+    this.parentElement.classList.toggle('open-menu');
+    this.classList.toggle('open');
 });
 
 
@@ -27,11 +27,15 @@ new fullpage('#fullpage', {
     scrollOverflow: true,
     autoScrolling: true,
     //scrollBar: false,
-    afterLoad: function(anchorLink, index) {
-      $(index.item).find("h2").toggleClass("active");
+    afterLoad: function(anchorLink, index) { 
+      for (let item of index.item.getElementsByTagName("h2")) {
+        item.classList.toggle('active');
+      }
     },
   
     onLeave: function(index, nextIndex, direction) {
-      $(index.item).find("h2").toggleClass("active");
+      for (let item of index.item.getElementsByTagName("h2")) {
+        item.classList.toggle('active');
+      }
     }, 
   }); 
