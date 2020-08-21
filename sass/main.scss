@@ -71,7 +71,7 @@ header {
     margin: 0 1em;
     position: fixed;
     max-height: 50px;
-    z-index: 10;
+    z-index: 200;
     width: calc(100% - 2em);
 
     .img {
@@ -128,7 +128,7 @@ section {
     background: linear-gradient(314deg, #222831, #30475e);
     background-size: 400% 400%;
 
-    animation: move-bg 19s ease infinite;
+    animation: move-bg 12s ease infinite;
 }
 
 .highlight {
@@ -154,7 +154,8 @@ section {
 //menu
 .open-menu > .toggle-menu {
     padding: 2em;
-    padding-right: 6em;
+    //padding-right: 6em;
+    padding-left: 4em;
     padding-top: 100px;
     height: 100%;
     max-height: 100%;
@@ -167,7 +168,7 @@ section {
     flex: 0;
     overflow: hidden;
     position: fixed;
-    z-index: 20;
+    z-index: 200;
     top: 0px;
     right: 0px;
     padding: 0em;
@@ -179,13 +180,13 @@ section {
     }
 
     p {
-        text-align: left;
+        text-align: right;
         margin-top: 0.5em;
     }
 }
 
 #hamburger-icon {
-    z-index: 30;
+    z-index: 300;
     width: 60px;
     height: 45px;
     float: right;
@@ -336,7 +337,7 @@ section {
         margin-left: 2em;
         margin-right: 2em;
         flex: 0 0 200px;
-        border: 2px $main-color solid;
+        border: 6px $main-color solid;
         float: left;
         display: block;
         overflow: hidden;
