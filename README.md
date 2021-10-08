@@ -1,4 +1,4 @@
-# nijka.github.io
+# Personal Website
 
 
 My personal website. It was built using Github Pages.
